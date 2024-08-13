@@ -43,73 +43,6 @@ Este proyecto es una aplicación web en React que consume la API de Colombia par
 
    La aplicación estará disponible en `http://localhost:3000`.
 
-### **Despliegue con Docker**
-
-1. **Crea un archivo `Dockerfile` en la raíz del proyecto con el siguiente contenido:**
-
-   ```Dockerfile
-   # Usa una imagen base de Node.js
-   FROM node:16
-
-   # Configura el directorio de trabajo
-   WORKDIR /app
-
-   # Copia los archivos de la aplicación
-   COPY package*.json ./
-   RUN npm install
-   COPY . .
-
-   # Construye la aplicación React
-   RUN npm run build
-
-   # Instala un servidor estático para servir la aplicación construida
-   RUN npm install -g serve
-
-   # Expone el puerto en el que la aplicación estará escuchando
-   EXPOSE 5000
-
-   # Comando para iniciar el servidor estático
-   CMD ["serve", "-s", "build"]
-   ```
-
-2. **Construye la imagen Docker:**
-
-   ```bash
-   docker build -t nombre-imagen .
-   ```
-
-3. **Ejecuta el contenedor Docker:**
-
-   ```bash
-   docker run -d -p 5000:5000 --name nombre-contenedor nombre-imagen
-   ```
-
-   La aplicación estará disponible en `http://localhost:5000`.
-
-### **Despliegue con Docker Compose**
-
-1. **Crea un archivo `docker-compose.yml` en la raíz del proyecto con el siguiente contenido:**
-
-   ```yaml
-   version: "3.8"
-
-   services:
-     app:
-       build: .
-       ports:
-         - "5000:5000"
-       environment:
-         - REACT_APP_API_URL=https://api-colombia.com/
-   ```
-
-2. **Construye y ejecuta con Docker Compose:**
-
-   ```bash
-   docker-compose up --build
-   ```
-
-   Esto construirá la imagen y ejecutará el contenedor según las configuraciones del archivo `docker-compose.yml`.
-
 ## Funcionalidades
 
 ### **1. Consulta y Procesamiento de Datos**
@@ -157,4 +90,4 @@ Proporciona información de contacto o enlaces a perfiles de redes sociales para
 
 - **Autor**: Laura Larrotta
 - **Email**: larrotta.laura@gmail.com
-- **GitHub**: [lauralarrotta](https://github.com/lauralarrotta)
+- **GitHub**: [larrotta.laura@gmail.com](mailto:larrotta.laura@gmail.com)

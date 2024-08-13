@@ -89,5 +89,5 @@ Este proyecto está licenciado bajo la Licencia MIT.
 Proporciona información de contacto o enlaces a perfiles de redes sociales para que los usuarios puedan hacer preguntas o sugerencias.
 
 - **Autor**: Laura Larrotta
-- **Email**: larrotta.laura@gmail.com
-- **GitHub**: [larrotta.laura@gmail.com](mailto:larrotta.laura@gmail.com)
+- **Email**: [larrotta.laura@gmail.com](mailto:larrotta.laura@gmail.com)
+- **GitHub**: [lauralarrotta](https://github.com/lauralarrotta)
